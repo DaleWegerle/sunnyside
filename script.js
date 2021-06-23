@@ -1,8 +1,10 @@
 function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
+  var x = document.getElementById("myHiddenCont");
+  var y = 600;
+  if (x.className === "hiddenCont") {
+    x.className = "visCont";
+  } 
+  else {
+    x.className = "hiddenCont";
   }
+}

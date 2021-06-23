@@ -1,111 +1,382 @@
-body {
-    margin: 0;
-    font-family: 'barlow';
+body{
+  padding: 0;
+  margin: 0;
+  background-color: cornflowerblue;
+  font-family: 'barlow';
+  font-weight: 600;
+}
 
-  }
+h2, h3{
+  font-family: 'fraunces';
+}
+
+.contNav{
+  background-color: teal;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px; 
+}
+
+
+.logoSpace{
+  width: 50%;
+  margin-left: 16px;
+}
+
+.linkSpace{
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
   
-  .topnav {
-    overflow: hidden;
-    background-color: transparent;
-    top: 0;
-    position: fixed;
-    width: 100%;
-    padding: 16px;
-  }
-  
-  .logo {
-    float: left;
-    display: block;
+}
+
+.linkSpace a{
+  margin-right: 16px;
+  padding: 16px;
+  border: white solid 3px;
+  text-decoration: none;
+  color: white;
+}
+
+.linkSpace .icon{
+  display: none;
+}
+
+.hiddenCont{
+  display: none;
+  z-index: 10;
+}
+
+.hidden a{
+  display: none;
+  z-index: 10;
+}
+
+.navPosition{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+@media screen and (max-width: 600px) {
+  .linkSpace a{
+      display: none;
   }
 
-  .topnav a{
-    float: right;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-    font-size: 17px;
-    margin-right: 1em;
-  }
-  
-  .topnav a:hover {
-    
-    background-color: #f2f2f2;
-    fill-opacity: 0.5;
-    color: #f2f2f2;
-    border: transparent;
-    border-radius: 25px;
-  }
-  
-  .topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-  
-  .topnav .icon {
-    display: none;
-  }
-
-  .header{
+  .linkSpace .icon{
       display: flex;
+      margin-right: 16px;
+      padding: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .visCont {
+      margin-top: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      align-items: center;  
+     
   }
-
-  .headerImage{
-    width: 100%;
-    height: auto;
+  
+  .hidden{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      width: 90%;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      
   }
-
-  .headerText{
+   .hidden a{
+      display: initial;
+      padding: 16px;
+      text-decoration: none;
+      color: grey;
+      
+  }
+  .triangle{
+      /*transform: translate(193px, 25px);*/
+      position: relative;
+      right: -192.5px;
+      top: 25px;
+      width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-right: 50px solid white;
+    border-bottom: 25px solid transparent;
+        
+  }
+  /*.headerBanner{
+      top: 0;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: -2;
       position: absolute;
+  }*/
+  .contentBody {
+      width: 100%;
+  }
+
+  .contentBody{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: flex-start;
+      z-index: -5;
+  }
+
+  .headerBannerContent{
+      top: 25%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute; 
+      z-index: 0;
+      
+  }
+
+  .headerTitle{
       font-family: 'fraunces';
       font-weight: 700;
       color: rgb(255, 255, 255);
       font-size: 60px;
       letter-spacing: 0.3vw;
       text-align: center;
+      z-index: 0;
+  }
+  .downArrow{
+      width: 20px;
+      z-index: 0;
   }
 
-
-
-  
-  @media screen and (max-width: 600px) {
-    .topnav a {display: none;}
-    .topnav a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-      float: right;
-      display: block;
-    }
+  .headerBannerOrange{
+      width: 100%;
+      background-image: url("images/mobile/image-header.jpg");
+      background-position: bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 700px;
   }
-  
-  @media screen and (max-width: 600px) {
-    .logo{
-        margin-right: 100%;
-    }
-    .topnav.responsive {
-        position: relative;
-        padding: 16px;
-    }
 
-    .topnav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    
-    .topnav.responsive a {
-      float: none;
-      display: block;
+  .imageBlock{
+      width: 100%;
+      background-position: bottom;
+      background-size: contain;
+      /*background-repeat: no-repeat;*/   
+  }
+
+  .Egg{
+      background-image: url("images/mobile/image-transform.jpg");
+      height: 404px;
+  }
+
+  .Cup{
+      background-image: url("images/mobile/image-stand-out.jpg");
+      height: 400px;
+  }
+  .infoBlock{
+      background-color: white;
+      color: #2b2b2b;
+      padding: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .infoBlock h2{
+      font-size: 35px;
+      font-weight: 900;
       text-align: center;
-      margin: auto;
-      content: "";
-      clear: both;
-      display: table;
-    }
+      
+  }
+
+  .infoBlock p{
+      text-align: center;
+      font-size: 18px;
+      line-height: 30px;
+      
 
   }
+
+  .infoBlock a{
+      font-family: 'fraunces';
+      font-size: 25px;
+      font-weight: 800;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #2b2b2b;
+  }
+
+  .infoBlockBackground{
+      background-image: url("images/mobile/image-graphic-design.jpg");
+      background-size: cover;
+      background-position: center;
+      color: hsl(167, 40%, 24%); 
+      padding: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 400px;
+  }
+
+  .infoBlockBackground h2{
+      font-size: 35px;
+      font-weight: 900;
+      text-align: center;  
+  }
+
+  .infoBlockBackground p{
+      text-align: center;
+      font-size: 18px;
+      line-height: 30px;
+  }
+
+  .infoBlockBackgroundOrange{
+      background-image: url("images/mobile/image-photography.jpg");
+      background-size: cover;
+      background-position: center;
+      color: hsl(198, 62%, 26%); 
+      padding: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 400px;
+  }
+
+  .infoBlockBackgroundOrange h2{
+      font-size: 35px;
+      font-weight: 900;
+      text-align: center;  
+  }
+
+  .infoBlockBackgroundOrange p{
+      text-align: center;
+      font-size: 18px;
+      line-height: 30px;
+  }
+  .testiCont{
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10%;
+  }
+
+  .testiTitle{
+      color: grey;
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 100px;
+  }
+
+  .testiTile{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #2b2b2b;
+  }
+  .testiTile p{
+      text-align: center;
+      font-size: 18px;
+      line-height: 30px;
+  }
+
+  .testiTile .clientPics{
+      border-radius: 50%;
+  }
+
+  .testiName{
+      color: #2b2b2b;
+      font-size: 25px;
+      font-weight: bold; 
+      margin-bottom: 2px;
+  }
+
+  .testiPosition{
+      color: grey;
+      margin-top: 2px;
+      margin-bottom: 100px;
+  }
+
+  .imageTile{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .tile{
+      background-position: bottom;
+      background-size: cover;
+      width: 50%;
+      height: 250px;
+  }
+
+  .Milk{
+      background-image: url("images/mobile/image-gallery-milkbottles.jpg");
+  }
+
+  .Cone{
+      background-image: url("images/mobile/image-gallery-cone.jpg");
+  }
+
+  .Sugar{
+      background-image: url("images/mobile/image-gallery-sugar-cubes.jpg");
+  }
+
+  .Orange{
+      background-image: url("images/mobile/image-gallery-orange.jpg");
+  }
+
+  .footer{
+      width: 100%;
+      background-color: hsl(168, 34%, 41%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10%;
+  }
+
+  .footerLinks{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .footerLinks a{
+      text-decoration: none;
+      padding: 40px;
+      color: white;
+  }
+
+  .footerSocial{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .socialIcon{
+      padding: 20px;
+  }
+
   
+}
